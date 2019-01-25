@@ -78,8 +78,8 @@ export default {
     padding-left: 255px;
     height: 385px;
     background: #fff
-      url(https://api.keepwork.com/storage/v0/siteFiles/821/raw#创意时报第一期头部BG.png)
-      left top no-repeat;
+      url('../../asset/images/edition1/edition1-background-1.png') left top
+      no-repeat;
     position: relative;
     &-title {
       position: absolute;
@@ -192,7 +192,7 @@ export default {
       text-align: center;
       font-weight: normal;
       border: none;
-      background: url('https://qiniu.keepwork.com/d64d8a80-c2e7-11e8-8d6f-619ab519cf59.jpg?e=1538202599&token=LYZsjH0681n9sWZqCM4E2KmU6DsJOE7CAM4O3eJq:EoE1RhjFDQ4lj2v6TuX7SzOyR_8=#%E5%88%9B%E6%84%8F%E6%97%B6%E6%8A%A5%E7%AC%AC%E4%B8%80%E6%9C%9F%E5%BA%95%E9%83%A8BG.jpg')
+      background: url('../../asset/images/edition1/edition1-background.jpg')
         left top no-repeat;
     }
     &-strength {
