@@ -1,9 +1,9 @@
 <template>
   <div class="page-guide">
     <div class="page-guide-title">
-      <img class="page-guide-line-icon" src="@/asset/images/edition1/guidLineIcon.png" alt="">
+      <img class="page-guide-line-icon" src="@/asset/images/edition2/guidLineIcon.png" alt="">
       <span>导引</span>
-      <img class="page-guide-line-icon page-guide-line-icon-rorate" src="@/asset/images/edition1/guidLineIcon.png" alt="">
+      <img class="page-guide-line-icon page-guide-line-icon-rorate" src="@/asset/images/edition2/guidLineIcon.png" alt="">
     </div>
     <div class="page-guide-content">
       <div class="page-guide-item">
@@ -22,11 +22,15 @@
   </div>
 </template>
 <style lang="scss" scoped>
-$offsetX: -77px;
-$offsetY: 68px;
+$itemWidth: 364px;
+$itemHeight: 88px;
+$offsetX: 77px;
+$offsetY: 20px;
 .page-guide {
   text-align: center;
-  padding: 60px 0;
+  padding: 60px 0 0;
+  background: url('../../asset/images/edition2/guidBg.jpg') no-repeat bottom
+    #f0f5f9;
   &-title {
     font-size: 26px;
     color: #333;
@@ -43,28 +47,33 @@ $offsetY: 68px;
     position: relative;
     width: 1221px;
     margin: 0 auto;
-    height: 430px;
+    height: 370px;
+    margin-top: 60px;
   }
   &-item {
     width: 364px;
     height: 88px;
     line-height: 88px;
     color: #fff;
-    background: url(/public/img/guidButtonBg.png) no-repeat;
+    background: url('../../asset/images/edition2/guidButtonBg.png') no-repeat;
     display: inline-block;
-    position: relative;
-    // @for $i from 1 through 3 {
-    //   &:nth-child(#{$i + 1}) {
-    //     left: $offsetX * $i;
-    //     top: $offsetY * $i;
-    //   }
-    // }
-  }
-  @for $i from 1 through 3 {
-    &-item {
-
+    position: absolute;
+    font-size: 19px;
+    cursor: pointer;
+    &-index {
+      font-size: 30px;
+      margin-right: 12px;
+      font-weight: bold;
+    }
+    &:hover {
+      color: #f6ff03;
     }
   }
-  
+  @for $i from 0 through 3 {
+    &-item:nth-child(#{$i + 1}) {
+      left: ($itemWidth - $offsetX) * $i;
+      top: ($itemHeight - $offsetY) * $i;
+    }
+  }
 }
 </style>
