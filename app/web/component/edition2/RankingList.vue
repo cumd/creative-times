@@ -4,7 +4,7 @@
       <div class="ranking-list-center-title">
         争霸榜单实时看
       </div>
-      <a href="#" class="ranking-list-center-more">进入作品排行榜>> </a>
+      <a href="https://keepwork.com/ranking" class="ranking-list-center-more">进入作品排行榜>> </a>
       <div class="ranking-list-center-projects">
         <project-cell class="ranking-list-center-project-box" :project="project" v-for="(project,index) in handpickProjects" :key="index"></project-cell>
       </div>
