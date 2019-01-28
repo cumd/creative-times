@@ -1075,12 +1075,12 @@ aws4@^1.2.1, aws4@^1.8.0:
   resolved "http://registry.npm.taobao.org/aws4/download/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
   integrity sha1-8OAD2cqef1nHpQiUXXsu+aBKVC8=
 
-axios@^0.17.1:
-  version "0.17.1"
-  resolved "http://registry.npm.taobao.org/axios/download/axios-0.17.1.tgz#2d8e3e5d0bdbd7327f91bc814f5c57660f81824d"
-  integrity sha1-LY4+XQvb1zJ/kbyBT1xXZg+Bgk0=
+axios@^0.18.0:
+  version "0.18.0"
+  resolved "http://registry.npm.taobao.org/axios/download/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+  integrity sha1-MtU+SFHv3AoRmTts0AB4nXDAUQI=
   dependencies:
-    follow-redirects "^1.2.5"
+    follow-redirects "^1.3.0"
     is-buffer "^1.1.5"
 
 axobject-query@^2.0.2:
@@ -1735,7 +1735,7 @@ babel-plugin-transform-regenerator@^6.22.0:
   dependencies:
     regenerator-transform "^0.10.0"
 
-babel-plugin-transform-runtime@^6.15.0:
+babel-plugin-transform-runtime@^6.15.0, babel-plugin-transform-runtime@^6.23.0:
   version "6.23.0"
   resolved "http://registry.npm.taobao.org/babel-plugin-transform-runtime/download/babel-plugin-transform-runtime-6.23.0.tgz#88490d446502ea9b8e7efb0fe09ec4d99479b1ee"
   integrity sha1-iEkNRGUC6puOfvsP4J7E2ZR5se4=
@@ -5814,7 +5814,7 @@ flushwritable@^1.0.0:
   resolved "http://registry.npm.taobao.org/flushwritable/download/flushwritable-1.0.0.tgz#3e328d8fde412ad47e738e3be750b4d290043498"
   integrity sha1-PjKNj95BKtR+c44751C00pAENJg=
 
-follow-redirects@^1.0.0, follow-redirects@^1.2.5:
+follow-redirects@^1.0.0, follow-redirects@^1.3.0:
   version "1.6.1"
   resolved "http://registry.npm.taobao.org/follow-redirects/download/follow-redirects-1.6.1.tgz#514973c44b5757368bad8bddfe52f81f015c94cb"
   integrity sha1-UUlzxEtXVzaLrYvd/lL4HwFclMs=
@@ -8842,7 +8842,7 @@ moment-timezone@^0.5.23:
   dependencies:
     moment ">= 2.9.0"
 
-"moment@>= 2.9.0", moment@^2.17.1, moment@^2.22.2, moment@^2.23.0:
+"moment@>= 2.9.0", moment@^2.22.2, moment@^2.23.0, moment@^2.24.0:
   version "2.24.0"
   resolved "http://registry.npm.taobao.org/moment/download/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha1-DQVdU/UFKqZTyfbraLtdEr9cK1s=
