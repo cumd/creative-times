@@ -3,7 +3,7 @@
     <code-banner></code-banner>
     <page-guide></page-guide>
     <game-intro></game-intro>
-    <code-day class="edition2-page-offset"></code-day>
+    <intro-item class="edition2-page-offset"></intro-item>
   </div>
 </template>
 
@@ -15,20 +15,20 @@
 import CodeBanner from '@/component/edition2/CodeBanner'
 import PageGuide from '@/component/edition2/PageGuide'
 import GameIntro from '@/component/edition2/GameIntro'
-import CodeDay from '@/component/edition2/CodeDay'
+import IntroItem from '@/component/edition2/IntroItem'
 export default {
   components: {
     CodeBanner,
     PageGuide,
     GameIntro,
-    CodeDay
+    IntroItem
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .edition2-page {
-  &-offset /deep/ .code-day-container {
+  &-offset /deep/ .intro-item-container {
     position: relative;
     top: -80px;
   }
