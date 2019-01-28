@@ -48,7 +48,7 @@ export default {
   background: url('../../asset/images/edition2/awardbg.png') no-repeat top
     center;
   background-size: 100%;
-  padding: 60px 20px;
+  padding: 60px 20px 50px;
   &-title {
     width: 400px;
     height: 52px;
@@ -58,15 +58,17 @@ export default {
     letter-spacing: 3px;
     color: #ffffff;
     font-size: 26px;
+    font-weight: 700;
     background: url('../../asset/images/edition2/award-title.png') no-repeat top center;
   }
   &-content {
     max-width: 1080px;
+    box-sizing: border-box;
     box-shadow: 0px 8px 13px 0px rgba(20, 36, 111, 0.11);
     border-radius: 10px;
-    padding: 56px;
+    padding: 59px 57px;
     margin: 0 auto;
-    background: url('../../asset/images/edition2/award.png') no-repeat top right
+    background: url('../../asset/images/edition2/award.png') no-repeat top 59px right 0
       #fff;
     &-title {
       background: url('../../asset/images/edition2/title-bg.png') no-repeat left
@@ -79,11 +81,15 @@ export default {
       letter-spacing: 2px;
       color: #812d04;
       font-size: 18px;
+      margin:0 0 20px 17px;
     }
     &-text {
-      max-width: 550px;
+      max-width: 530px;
       font-size: 16px;
+      box-sizing: border-box;
       padding-left: 25px;
+      margin-left: 17px;
+      line-height: 27px;
       position: relative;
       &-icon {
         position: absolute;
@@ -92,7 +98,7 @@ export default {
       }
     }
     &-more {
-      padding-left: 25px;
+      padding-left: 40px;
       line-height: 27px;
       letter-spacing: 2px;
       color: #4088ff;
@@ -111,18 +117,25 @@ export default {
           color: #754fc1;
           font-size: 22px;
           margin-bottom: 30px;
+          font-weight: 700;
           .ranking {
             color: #fff;
             background-color: #754fc1;
             border-radius: 3px;
-            margin-left: 10px;
+            margin-left: 8px;
+            display: inline-block;
+            min-width: 50px;
+            text-align: center;
+            font-weight: normal;
           }
         }
         &-bonus {
           color: #333;
+          font-size: 25px;
           .bonus {
             color: #ff6600;
             font-size: 42px;
+            font-weight: 700;
           }
         }
       }
