@@ -9,7 +9,7 @@
         <img class="intro-item-steps-arrow" src="@/asset/images/edition2/step_arrow.png" alt="">
         <div class="intro-item-steps-item">报名成功</div>
       </div>
-      <div class="intro-item-apply">去报名</div>
+      <a class="intro-item-apply" href="//keepwork.com/paraworld/NPL/index" target="_blank">去报名</a>
     </div>
     <div class="intro-item-container intro-item-rules">
       <div class="intro-item-title">评分规则</div>
@@ -92,6 +92,8 @@ export default {
     margin: 0 auto;
     color: #2b7aff;
     font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
   }
   &-rules {
     padding: 40px 60px;
