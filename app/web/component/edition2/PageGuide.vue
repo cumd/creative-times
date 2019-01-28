@@ -1,9 +1,9 @@
 <template>
   <div class="page-guide">
     <div class="page-guide-title">
-      <img class="page-guide-line-icon" src="@/asset/images/edition1/guidLineIcon.png" alt="">
+      <img class="page-guide-line-icon" src="@/asset/images/edition2/guidLineIcon.png" alt="">
       <span>导引</span>
-      <img class="page-guide-line-icon page-guide-line-icon-rorate" src="@/asset/images/edition1/guidLineIcon.png" alt="">
+      <img class="page-guide-line-icon page-guide-line-icon-rorate" src="@/asset/images/edition2/guidLineIcon.png" alt="">
     </div>
     <div class="page-guide-content">
       <div class="page-guide-item">
