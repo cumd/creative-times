@@ -11,6 +11,7 @@ module.exports = {
     }
   },
   alias: {
+    '@': 'app/web',
     server: 'app/web/framework/vue/entry/server.js',
     client: 'app/web/framework/vue/entry/client.js',
     asset: 'app/web/asset',
