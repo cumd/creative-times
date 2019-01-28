@@ -1,12 +1,12 @@
 <template>
   <div class="edition2-page">
     <code-banner></code-banner>
-    <page-guide></page-guide>
-    <game-intro></game-intro>
+    <page-guide :pageAnchors='pageAnchors'></page-guide>
+    <game-intro id="gameIntro"></game-intro>
     <intro-item class="edition2-page-offset"></intro-item>
-    <awards-and-prizes></awards-and-prizes>
-    <ranking-list></ranking-list>
-    <next-notice></next-notice>
+    <awards-and-prizes id="awardsAndPrizes"></awards-and-prizes>
+    <ranking-list id="rankingList"></ranking-list>
+    <next-notice id="nextNotice"></next-notice>
   </div>
 </template>
 
@@ -23,6 +23,32 @@ import GameIntro from '@/component/edition2/GameIntro'
 import IntroItem from '@/component/edition2/IntroItem'
 import NextNotice from '@/component/edition2/NextNotice'
 export default {
+  data() {
+    return {
+      pageAnchors: [
+        {
+          id: 'gameIntro',
+          index: '01',
+          text: '大赛简介'
+        },
+        {
+          id: 'awardsAndPrizes',
+          index: '02',
+          text: '奖励与奖品'
+        },
+        {
+          id: 'rankingList',
+          index: '03',
+          text: '争霸榜单实时看'
+        },
+        {
+          id: 'nextNotice',
+          index: '04',
+          text: '下期预告'
+        }
+      ]
+    }
+  },
   components: {
     CodeBanner,
     PageGuide,

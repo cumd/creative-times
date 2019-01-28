@@ -2,7 +2,7 @@
   <div class="code-banner">
     <img class="code-banner-fake-bg" src="@/asset/images/edition2/NPLCodeBanner.jpg" alt="">
     <div class="code-banner-operate">
-      <a href="#" class="code-banner-fake-button">
+      <a href="//keepwork.com/ranking" target="_blank" class="code-banner-fake-button">
         <img class="code-banner-trophy-icon" src="@/asset/images/edition2/trophy.png" alt="">
         进入作品排行榜
       </a>
