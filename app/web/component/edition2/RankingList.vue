@@ -2,11 +2,15 @@
   <div class="ranking-list">
     <div class="ranking-list-center">
       <div class="ranking-list-center-title">
-        争霸榜单实时看
+        <img src="@/asset/images/edition2/trophy.png" alt="">
+        <span class="ranking-list-center-title-text">争霸榜单实时看</span>
       </div>
       <a href="https://keepwork.com/ranking" class="ranking-list-center-more">进入作品排行榜>> </a>
       <div class="ranking-list-center-projects">
         <project-cell class="ranking-list-center-project-box" :project="project" v-for="(project,index) in handpickProjects" :key="index"></project-cell>
+      </div>
+      <div class="ranking-list-center-button-more">
+        进入作品排行榜>
       </div>
     </div>
   </div>
@@ -61,16 +65,23 @@ export default {
     margin: 0 auto;
     position: relative;
     &-title {
-      width: 400px;
-      height: 52px;
       margin: 0 auto 60px;
-      text-align: center;
-      line-height: 52px;
-      letter-spacing: 3px;
-      color: #ffffff;
-      font-size: 26px;
-      background: url('../../asset/images/edition2/ranking-title.png') no-repeat
-        top center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-text {
+        display: inline-block;
+        height: 52px;
+        width: 400px;
+        text-align: center;
+        line-height: 52px;
+        letter-spacing: 3px;
+        color: #ffffff;
+        font-size: 26px;
+        font-weight: 700;
+        background: url('../../asset/images/edition2/ranking-title.png')
+          no-repeat top center;
+      }
     }
     &-more {
       color: #fff;
@@ -86,14 +97,31 @@ export default {
         flex: 1;
       }
     }
+    &-button-more {
+      width: 329px;
+      height: 72px;
+      border-radius: 36px;
+      border: solid 2px rgb(176, 175, 245);
+      margin: 52px auto;
+      line-height: 72px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: normal;
+      font-stretch: normal;
+      color: #fff;
+      display: none;
+    }
   }
 }
 @media (max-width: 768px) {
   .ranking-list {
-    background-size: 180%;
-    &-title {
-      margin-bottom: 20px;
-      width: 100%;
+    &-center {
+      &-more {
+        display: none;
+      }
+      &-button-more {
+        display: block;
+      }
     }
   }
 }
