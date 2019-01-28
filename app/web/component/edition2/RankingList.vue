@@ -9,9 +9,9 @@
       <div class="ranking-list-center-projects">
         <project-cell class="ranking-list-center-project-box" :project="project" v-for="(project,index) in handpickProjects" :key="index"></project-cell>
       </div>
-      <div class="ranking-list-center-button-more">
+      <a class="ranking-list-center-button-more" href="https://keepwork.com/ranking">
         进入作品排行榜>
-      </div>
+      </a>
     </div>
   </div>
 </template>
@@ -110,6 +110,7 @@ export default {
       font-stretch: normal;
       color: #fff;
       display: none;
+      text-decoration: none;
     }
   }
 }
