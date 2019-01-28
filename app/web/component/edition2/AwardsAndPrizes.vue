@@ -15,7 +15,7 @@
         <img src="@/asset/images/edition2/title-icon.png" alt="" class="awards-and-prizes-content-text-icon">所有获奖作品必须满足最低标准要求，若本届大赛提交的所有作品未达到对应奖项最低标准要求，则该奖项本届不进行评选；</p>
       <p class="awards-and-prizes-content-text">
         <img src="@/asset/images/edition2/title-icon.png" alt="" class="awards-and-prizes-content-text-icon">此前已获奖作品，包括但不限于获得PAC大赛、IICC大赛、NPL大赛奖项的作品不再参与评选（人气奖不受此条规则限制）。</p>
-      <a href="#" class="awards-and-prizes-content-more">点击查看详情</a>
+      <a href="https://keepwork.com/paraworld/NPL/index" class="awards-and-prizes-content-more">点击查看详情</a>
       <div class="awards-and-prizes-content-level">
         <div class="awards-and-prizes-content-level-box">
           <div class="awards-and-prizes-content-level-box-ranking">一等奖<span class="ranking">1名</span></div>
