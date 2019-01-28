@@ -33,7 +33,7 @@ export default {
   methods: {
     getHandpick() {
       axios
-        .post('https://api-release.keepwork.com/core/v0/projects/search', {
+        .post('https://api.keepwork.com/core/v0/projects/search', {
           'x-order': 'choicenessNo-desc',
           'x-per-page': 8,
           'x-page': 1
