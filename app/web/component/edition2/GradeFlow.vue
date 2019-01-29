@@ -12,10 +12,12 @@
     </div>
     <div class="grade-flow-content">
       <div class="grade-flow-arrow" v-show="activeIndex > 1" @click="showPrev">
-        <img src="@/asset/images/edition2/step_prev.png" alt="">
+        <img class="grade-flow-arrow-default" src="@/asset/images/edition2/step_prev.png" alt="">
+        <img class="grade-flow-arrow-hover" src="@/asset/images/edition2/step_prev_hover.png" alt="">
       </div>
       <div class="grade-flow-arrow grade-flow-arrow-rotate" v-show="activeIndex < 4" @click="showNext">
-        <img src="@/asset/images/edition2/step_prev.png" alt="">
+        <img class="grade-flow-arrow-default" src="@/asset/images/edition2/step_prev.png" alt="">
+        <img class="grade-flow-arrow-hover" src="@/asset/images/edition2/step_prev_hover.png" alt="">
       </div>
       <img :src="activeImg" alt="">
     </div>
@@ -114,9 +116,20 @@ export default {
     height: 60px;
     line-height: 66px;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.3);
+    &-default {
+      display: inline;
+    }
+    &-hover {
+      display: none;
+    }
     &:hover {
-      background-color: rgba(0, 0, 0, 0.75);
+      .grade-flow-arrow-default {
+        display: none;
+      }
+      .grade-flow-arrow-hover {
+        display: inline;
+      }
     }
     &-rotate {
       left: auto;
