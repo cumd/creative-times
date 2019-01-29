@@ -12,6 +12,7 @@
 
 <style lang="scss">
 @import '../../asset/css/common.css';
+@import '../../asset/css/display.css';
 </style>
 
 <script>

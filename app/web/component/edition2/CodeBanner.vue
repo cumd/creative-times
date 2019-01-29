@@ -1,6 +1,7 @@
 <template>
   <div class="code-banner">
-    <img class="code-banner-fake-bg" src="@/asset/images/edition2/NPLCodeBanner.jpg" alt="">
+    <img class="code-banner-fake-bg hidden-xs-only" src="@/asset/images/edition2/NPLCodeBanner.jpg" alt="">
+    <img class="code-banner-fake-bg hidden-sm-and-up" src="@/asset/images/edition2/NPLCodeBanner_phone.jpg" alt="">
     <div class="code-banner-operate">
       <a href="//keepwork.com/ranking" target="_blank" class="code-banner-fake-button">
         <img class="code-banner-trophy-icon" src="@/asset/images/edition2/trophy.png" alt="">
