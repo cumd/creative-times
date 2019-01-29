@@ -130,3 +130,61 @@ export default {
   }
 }
 </style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .intro-item {
+    padding: 0 10px;
+    &-title {
+      font-size: 16px;
+    }
+    &-container {
+      padding: 21px 0 31px;
+      margin-bottom: 14px;
+    }
+    &-steps {
+      margin: 17px 0 22px;
+      &-item {
+        width: 90px;
+        height: 36px;
+        font-size: 12px;
+        line-height: initial;
+        border-radius: 10px;
+        padding: 0 8px;
+        box-sizing: border-box;
+        overflow: hidden;
+        &:last-child {
+          line-height: 32px;
+        }
+      }
+      &-arrow {
+        margin: 0 4px;
+        width: 12px;
+        position: relative;
+        top: -13px;
+      }
+    }
+    &-apply {
+      font-size: 13px;
+      height: 32px;
+      line-height: 32px;
+      width: 112px;
+    }
+    &-rules {
+      &-content {
+        padding: 0 16px 0 24px;
+        margin-top: 16px;
+      }
+      &-item {
+        margin-bottom: 8px;
+        font-size: 12px;
+        &::before {
+          width: 4px;
+          height: 4px;
+          left: -11px;
+          top: 6px;
+        }
+      }
+    }
+  }
+}
+</style>

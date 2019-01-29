@@ -19,7 +19,7 @@
         <img class="grade-flow-arrow-default" src="@/asset/images/edition2/step_prev.png" alt="">
         <img class="grade-flow-arrow-hover" src="@/asset/images/edition2/step_prev_hover.png" alt="">
       </div>
-      <img :src="activeImg" alt="">
+      <img class="grade-flow-content-image" :src="activeImg" alt="">
     </div>
   </div>
 </template>
@@ -105,8 +105,12 @@ export default {
   }
   &-content {
     width: 830px;
+    max-width: 100%;
     margin: 0 auto;
     position: relative;
+    &-image {
+      max-width: 100%;
+    }
   }
   &-arrow {
     position: absolute;
@@ -135,6 +139,40 @@ export default {
       left: auto;
       right: 0;
       transform: rotate(180deg);
+    }
+  }
+}
+</style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .grade-flow {
+    &-nav {
+      margin-bottom: 16px;
+      &-item {
+        width: 25px;
+        height: 25px;
+        border-width: 5px;
+        font-size: 13px;
+        line-height: 25px;
+      }
+    }
+    &-line {
+      width: 45px;
+    }
+    &-content {
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    &-arrow {
+      width: 28px;
+      height: 44px;
+      line-height: 48px;
+      top: 14vw;
+      left: 20px;
+      &-rotate {
+        left: auto;
+        right: 20px;
+      }
     }
   }
 }

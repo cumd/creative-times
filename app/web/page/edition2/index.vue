@@ -73,4 +73,16 @@ export default {
   }
 }
 </style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .edition2-page {
+    &-offset {
+      margin-bottom: -24px;
+      /deep/ .intro-item-container {
+        top: -24px;
+      }
+    }
+  }
+}
+</style>
 

@@ -47,3 +47,21 @@
   }
 }
 </style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .code-banner {
+    &-operate {
+      top: 29vw;
+    }
+    &-fake-button {
+      font-size: 12px;
+      height: 31px;
+      line-height: 31px;
+      padding: 0 12px;
+    }
+    &-trophy-icon {
+      width: 13px;
+    }
+  }
+}
+</style>
