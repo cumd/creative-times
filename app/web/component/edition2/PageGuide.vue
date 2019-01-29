@@ -6,21 +6,30 @@
       <img class="page-guide-line-icon page-guide-line-icon-rorate" src="@/asset/images/edition2/guidLineIcon.png" alt="">
     </div>
     <div class="page-guide-content">
-      <div class="page-guide-item">
-        <span class="page-guide-item-index">01</span>大赛介绍
-      </div>
-      <div class="page-guide-item">
-        <span class="page-guide-item-index">02</span>奖励与奖品
-      </div>
-      <div class="page-guide-item">
-        <span class="page-guide-item-index">03</span>争霸榜单实时看
-      </div>
-      <div class="page-guide-item">
-        <span class="page-guide-item-index">04</span>下期预告
+      <div class="page-guide-item" v-for="(anchorItem, index) in pageAnchors" :key="index" @click="scrollToById(anchorItem.id)">
+        <span class="page-guide-item-index">{{anchorItem.index}}</span>{{anchorItem.text}}
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    pageAnchors: {
+      type: Array,
+      required: true
+    }
+  },
+  methods: {
+    scrollToById(id) {
+      document.getElementById(id).scrollIntoView()
+    }
+  }
+}
+</script>
+
+
 <style lang="scss" scoped>
 $itemWidth: 364px;
 $itemHeight: 88px;
@@ -31,6 +40,7 @@ $offsetY: 20px;
   padding: 60px 0 0;
   background: url('../../asset/images/edition2/guidBg.jpg') no-repeat bottom
     #f0f5f9;
+  background-size: cover;
   &-title {
     font-size: 26px;
     color: #333;
