@@ -15,6 +15,7 @@
   color: #333;
   padding: 65px 0 140px;
   background: url('../../asset/images/edition2/intro_bg.jpg') center no-repeat;
+  background-size: cover;
   &-title {
     font-size: 26px;
     margin-bottom: 53px;

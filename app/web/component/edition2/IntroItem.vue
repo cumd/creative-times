@@ -9,7 +9,7 @@
         <img class="intro-item-steps-arrow" src="@/asset/images/edition2/step_arrow.png" alt="">
         <div class="intro-item-steps-item">报名成功</div>
       </div>
-      <a class="intro-item-apply" href="//keepwork.com/paraworld/NPL/index" target="_blank">去报名</a>
+      <a class="intro-item-apply" href="//keepwork.com/paraworld/NPL/index" target="_blank">查看大赛详情</a>
     </div>
     <div class="intro-item-container intro-item-rules">
       <div class="intro-item-title">评分规则</div>
@@ -94,6 +94,10 @@ export default {
     font-size: 14px;
     display: inline-block;
     text-decoration: none;
+    &:hover {
+      background-color: #2a7aff;
+      color: #fff;
+    }
   }
   &-rules {
     padding: 40px 60px;
