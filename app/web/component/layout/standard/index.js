@@ -1,7 +1,4 @@
-
-import MainLayout from './main';
-
-const content = '<div id="app"><MainLayout><div slot="main"><slot></slot></div></MainLayout></div>';
+const content = '<div id="app"><slot></slot></div>'
 
 const template = `<!DOCTYPE html>
 <html lang="en">
@@ -16,27 +13,32 @@ const template = `<!DOCTYPE html>
 <body :class="baseClass">
   <div id="app">${content}</div>
 </body>
-</html>`;
+</html>`
 
 export default {
   name: 'Layout',
-  props: [ 'title', 'description', 'keywords' ],
-  components: {
-    MainLayout
-  },
+  props: ['title', 'description', 'keywords'],
   computed: {
     vTitle() {
-      return this.$root.title || this.title || 'Egg + Vue';
+      return this.$root.title || this.title || 'Egg + Vue'
     },
     vKeywords() {
-      return this.$root.keywords || this.keywords || 'egg, vue, webpack, server side render';
+      return (
+        this.$root.keywords ||
+        this.keywords ||
+        'egg, vue, webpack, server side render'
+      )
     },
     vDescription() {
-      return this.$root.description || this.description || 'egg-vue-webpack server side render';
+      return (
+        this.$root.description ||
+        this.description ||
+        'egg-vue-webpack server side render'
+      )
     },
     baseClass() {
-      return this.$root.baseClass;
+      return this.$root.baseClass
     }
   },
   template: EASY_ENV_IS_NODE ? template : content
-};
+}
