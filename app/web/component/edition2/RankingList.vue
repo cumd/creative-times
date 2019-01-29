@@ -7,7 +7,7 @@
       </div>
       <a href="https://keepwork.com/ranking" class="ranking-list-center-more">进入作品排行榜>> </a>
       <div class="ranking-list-center-projects">
-        <project-cell class="ranking-list-center-project-box" :project="project" v-for="(project,index) in handpickProjects" :key="index"></project-cell>
+        <project-cell class="ranking-list-center-project-box" :project="project" v-for="(project,index) in handpickProjects" :key="index" :ranking="true" :level="index"></project-cell>
       </div>
       <a class="ranking-list-center-button-more" href="https://keepwork.com/ranking">
         进入作品排行榜>
