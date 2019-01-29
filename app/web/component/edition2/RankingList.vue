@@ -3,7 +3,9 @@
     <div class="ranking-list-center">
       <div class="ranking-list-center-title">
         <img src="@/asset/images/edition2/trophy.png" alt="">
-        <span class="ranking-list-center-title-text">争霸榜单实时看</span>
+        <span class="ranking-list-center-title-text">
+          <!-- 争霸榜单实时看 -->
+        </span>
       </div>
       <a href="https://keepwork.com/ranking" target="_blank" class="ranking-list-center-more">进入作品排行榜>> </a>
       <div class="ranking-list-center-projects">
@@ -116,12 +118,29 @@ export default {
 }
 @media (max-width: 768px) {
   .ranking-list {
+    padding: 60px 0 90px;
     &-center {
       &-more {
         display: none;
       }
       &-button-more {
         display: block;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .ranking-list {
+    padding: 60px 0 90px;
+    &-center {
+      &-project {
+        &-box {
+          max-width: 200px;
+        }
+      }
+      &-button-more {
+        width: 80%;
+        font-size: 26px;
       }
     }
   }
