@@ -40,6 +40,7 @@ $offsetY: 20px;
   padding: 60px 0 0;
   background: url('../../asset/images/edition2/guidBg.jpg') no-repeat bottom
     #f0f5f9;
+  background-size: cover;
   &-title {
     font-size: 26px;
     color: #333;

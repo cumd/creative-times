@@ -28,6 +28,10 @@
     display: inline-block;
     line-height: 68px;
     padding: 0 50px;
+    &:hover {
+      background-color: #fff;
+      color: #2b7aff;
+    }
   }
   &-trophy-icon {
     vertical-align: middle;
