@@ -114,8 +114,9 @@ export default {
     height: 60px;
     line-height: 66px;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.55);
     &:hover {
-      background-color: rgba(0, 0, 0, 0.55);
+      background-color: rgba(0, 0, 0, 0.75);
     }
     &-rotate {
       left: auto;
