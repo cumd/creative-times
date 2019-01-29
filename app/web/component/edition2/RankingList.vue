@@ -5,7 +5,7 @@
         <img src="@/asset/images/edition2/trophy.png" alt="">
         <span class="ranking-list-center-title-text">争霸榜单实时看</span>
       </div>
-      <a href="https://keepwork.com/ranking" class="ranking-list-center-more">进入作品排行榜>> </a>
+      <a href="https://keepwork.com/ranking" target="_blank" class="ranking-list-center-more">进入作品排行榜>> </a>
       <div class="ranking-list-center-projects">
         <project-cell class="ranking-list-center-project-box" :project="project" v-for="(project,index) in handpickProjects" :key="index" :ranking="true" :level="index"></project-cell>
       </div>
@@ -84,7 +84,7 @@ export default {
       }
     }
     &-more {
-      color: #fff;
+      color: #fffc00;
       text-decoration: none;
       position: absolute;
       right: 10px;
