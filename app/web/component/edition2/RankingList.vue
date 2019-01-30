@@ -39,6 +39,7 @@ export default {
   },
   methods: {
     getHandpick() {
+      console.log(process.env.KEEPWORK_API_PREFIX)
       axios
         .post('https://api.keepwork.com/core/v0/projects/search', {
           'x-order': 'rate-desc',
