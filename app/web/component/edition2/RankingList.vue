@@ -1,8 +1,9 @@
 <template>
   <div class="ranking-list">
     <div class="ranking-list-center">
+      <div class="ranking-list-center-top"><img class="ranking-list-center-top-img" src="@/asset/images/edition2/trophy.png" alt=""></div>
       <div class="ranking-list-center-title">
-        <img src="@/asset/images/edition2/trophy.png" alt="">
+        <img class="ranking-list-center-title-img" src="@/asset/images/edition2/trophy.png" alt="">
         <span class="ranking-list-center-title-text">
           <!-- 争霸榜单实时看 -->
         </span>
@@ -40,9 +41,9 @@ export default {
     getHandpick() {
       axios
         .post('https://api.keepwork.com/core/v0/projects/search', {
-          'x-order': 'choicenessNo-desc',
+          'x-order': 'rate-desc',
           'x-per-page': 8,
-          'x-page': 1
+          type: 1
         })
         .then(result => {
           this.originHandpickProjects = result.data
@@ -66,6 +67,11 @@ export default {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    &-top {
+      text-align: center;
+      margin-bottom: 10px;
+      display: none;
+    }
     &-title {
       margin: 0 auto 60px;
       display: flex;
@@ -120,6 +126,14 @@ export default {
   .ranking-list {
     padding: 60px 0 90px;
     &-center {
+      &-top {
+        display: block;
+      }
+      &-title {
+        &-img {
+          display: none;
+        }
+      }
       &-more {
         display: none;
       }
