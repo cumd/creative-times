@@ -21,7 +21,7 @@
   }
   &-fake-button {
     text-decoration: none;
-    border: 2px solid #fff;
+    border: 2px solid;
     color: #fff;
     font-size: 26px;
     font-weight: bold;
@@ -30,8 +30,7 @@
     line-height: 68px;
     padding: 0 50px;
     &:hover {
-      background-color: #fff;
-      color: #2b7aff;
+      color: #00e4ff;
     }
   }
   &-trophy-icon {
