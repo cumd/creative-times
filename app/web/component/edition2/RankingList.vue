@@ -39,9 +39,9 @@ export default {
   },
   methods: {
     getHandpick() {
-      console.log(process.env.KEEPWORK_API_PREFIX)
+      let baseUrl = process.env.KEEPWORK_API_PREFIX
       axios
-        .post('https://api.keepwork.com/core/v0/projects/search', {
+        .post(`${baseUrl}/projects/search`, {
           'x-order': 'rate-desc',
           'x-per-page': 8,
           type: 1
