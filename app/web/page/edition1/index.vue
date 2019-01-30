@@ -8,7 +8,7 @@
           <div>
             <img src="@/asset/images/edition1/edition1-header-icon.png">
           </div>
-          <a class="times1-banner-button" href="/l/#/student/center" target="_blank">进入课程中心</a>
+          <a class="times1-banner-button" href="https://keepwork.com/l/student/center" target="_blank">进入课程中心</a>
         </div>
       </div>
       <div class="times1-advertising">
@@ -29,16 +29,16 @@
       <div class='times1-to-exchange'>
         去兑换
         <img src='@/asset/images/edition1/edition1-guide-icon.png'>
-        <a class="hide-sm-only" href="//keepwork.com/wiki/js/mod/knowledgeBean/index" target="_blank">https://keepwork.com/wiki/js/mod/knowledgeBean/index</a>
+        <a class="hide-sm-only" href="https://keepwork.com/a/exchangeMall" target="_blank">https://keepwork.com/wiki/js/mod/knowledgeBean/index</a>
         <a class="hide-sm-and-up" href="//keepwork.com/wiki/js/mod/knowledgeBean/index" target="_blank">兑换中心</a>
       </div>
       <img class="hide-sm-only times1-img-title" src="@/asset/images/edition1/edition1-title-1.png">
       <img class="hide-sm-and-up times1-img-title" src="@/asset/images/edition1/edition1-title-2.png">
-      <a target="_blank" href="https://keepwork.com/l/#/student/package/8">
+      <a target="_blank" href="https://keepwork.com/l/student/package/8">
         <img class="hide-sm-only" src="@/asset/images/edition1/animation-teaching-1.jpg">
         <img class="hide-sm-and-up" src="@/asset/images/edition1/animation-teaching-2.jpg">
       </a>
-      <a target="_blank" href="https://keepwork.com/l/#/student/package/6">
+      <a target="_blank" href="https://keepwork.com/l/student/package/6">
         <img class="hide-sm-only" src="@/asset/images/edition1/code-1.jpg">
         <img class="hide-sm-and-up" src="@/asset/images/edition1/code-2.jpg">
       </a>
@@ -47,7 +47,7 @@
     <div class="times1-footer">
       <h1 class="times1-footer-h1">
         还在等什么？现在就去 <span class="times1-footer-strength">学课程 / 赚知识豆 / 兑换哈奇装备</span>
-        <a href="/l/#/student/center" target="_blank" class="times1-footer-button">进入课程中心</a>
+        <a href="https://keepwork.com/l/student/center" target="_blank" class="times1-footer-button">进入课程中心</a>
       </h1>
     </div>
   </div>

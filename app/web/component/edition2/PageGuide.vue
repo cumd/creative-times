@@ -87,3 +87,45 @@ $offsetY: 20px;
   }
 }
 </style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .page-guide {
+    padding-top: 25px;
+    &-title {
+      font-size: 16px;
+    }
+    &-line-icon {
+      width: 25px;
+      margin-right: 12px;
+      &-rorate {
+        margin: 0 0 0 12px;
+      }
+    }
+    &-content {
+      width: 100%;
+      height: auto;
+      margin-top: 25px;
+      padding: 0 8px 24px;
+      box-sizing: border-box;
+    }
+    &-item {
+      width: 50%;
+      position: relative;
+      height: 44px;
+      line-height: 44px;
+      font-size: 12px;
+      background-size: contain;
+      &-index {
+        font-size: 15px;
+        margin-right: 6px;
+      }
+    }
+    @for $i from 0 through 3 {
+      &-item:nth-child(#{$i + 1}) {
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
+</style>

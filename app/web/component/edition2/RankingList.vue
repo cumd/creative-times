@@ -1,13 +1,16 @@
 <template>
   <div class="ranking-list">
     <div class="ranking-list-center">
+      <div class="ranking-list-center-top"><img class="ranking-list-center-top-img" src="@/asset/images/edition2/trophy.png" alt=""></div>
       <div class="ranking-list-center-title">
-        <img src="@/asset/images/edition2/trophy.png" alt="">
-        <span class="ranking-list-center-title-text">争霸榜单实时看</span>
+        <img class="ranking-list-center-title-img" src="@/asset/images/edition2/trophy.png" alt="">
+        <span class="ranking-list-center-title-text">
+          <!-- 争霸榜单实时看 -->
+        </span>
       </div>
-      <a href="https://keepwork.com/ranking" class="ranking-list-center-more">进入作品排行榜>> </a>
+      <a href="https://keepwork.com/ranking" target="_blank" class="ranking-list-center-more">进入作品排行榜>> </a>
       <div class="ranking-list-center-projects">
-        <project-cell class="ranking-list-center-project-box" :project="project" v-for="(project,index) in handpickProjects" :key="index"></project-cell>
+        <project-cell class="ranking-list-center-project-box" :project="project" v-for="(project,index) in handpickProjects" :key="index" :ranking="true" :level="index"></project-cell>
       </div>
       <a class="ranking-list-center-button-more" href="https://keepwork.com/ranking">
         进入作品排行榜>
@@ -36,11 +39,12 @@ export default {
   },
   methods: {
     getHandpick() {
+      let baseUrl = process.env.KEEPWORK_API_PREFIX
       axios
-        .post('https://api.keepwork.com/core/v0/projects/search', {
-          'x-order': 'choicenessNo-desc',
+        .post(`${baseUrl}/projects/search`, {
+          'x-order': 'rate-desc',
           'x-per-page': 8,
-          'x-page': 1
+          type: 1
         })
         .then(result => {
           this.originHandpickProjects = result.data
@@ -64,6 +68,11 @@ export default {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    &-top {
+      text-align: center;
+      margin-bottom: 10px;
+      display: none;
+    }
     &-title {
       margin: 0 auto 60px;
       display: flex;
@@ -84,7 +93,7 @@ export default {
       }
     }
     &-more {
-      color: #fff;
+      color: #fffc00;
       text-decoration: none;
       position: absolute;
       right: 10px;
@@ -116,12 +125,37 @@ export default {
 }
 @media (max-width: 768px) {
   .ranking-list {
+    padding: 60px 0 90px;
     &-center {
+      &-top {
+        display: block;
+      }
+      &-title {
+        &-img {
+          display: none;
+        }
+      }
       &-more {
         display: none;
       }
       &-button-more {
         display: block;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .ranking-list {
+    padding: 60px 0 90px;
+    &-center {
+      &-project {
+        &-box {
+          max-width: 200px;
+        }
+      }
+      &-button-more {
+        width: 80%;
+        font-size: 26px;
       }
     }
   }

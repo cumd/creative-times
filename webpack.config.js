@@ -1,4 +1,6 @@
-'use strict';
+'use strict'
+const Dotenv = require('dotenv-webpack')
+const dotenv = new Dotenv()
 module.exports = {
   egg: true,
   framework: 'vue',
@@ -7,7 +9,7 @@ module.exports = {
     exclude: ['app/web/page/[a-z]+/component', 'app/web/page/test'],
     loader: {
       client: 'app/web/framework/vue/entry/client-loader.js',
-      server: 'app/web/framework/vue/entry/server-loader.js',
+      server: 'app/web/framework/vue/entry/server-loader.js'
     }
   },
   alias: {
@@ -21,8 +23,8 @@ module.exports = {
   },
   dll: ['vue', 'axios'],
   loaders: {},
-  plugins: {},
-  done() {
-
-  }
-};
+  plugins: {
+    dotenv
+  },
+  done() {}
+}

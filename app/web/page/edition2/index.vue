@@ -12,6 +12,7 @@
 
 <style lang="scss">
 @import '../../asset/css/common.css';
+@import '../../asset/css/display.css';
 </style>
 
 <script>
@@ -68,6 +69,18 @@ export default {
     /deep/ .intro-item-container {
       position: relative;
       top: -80px;
+    }
+  }
+}
+</style>
+<style lang="scss" scoped>
+@media (max-width: 767px) {
+  .edition2-page {
+    &-offset {
+      margin-bottom: -24px;
+      /deep/ .intro-item-container {
+        top: -24px;
+      }
     }
   }
 }
