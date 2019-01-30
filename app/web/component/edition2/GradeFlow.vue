@@ -2,13 +2,11 @@
   <div class="grade-flow">
     <div class="grade-flow-title">评分流程</div>
     <div class="grade-flow-nav">
-      <div class="grade-flow-nav-item" :class="{'grade-flow-nav-item-active':activeIndex>=1}" @click="showByIndex(1)">1</div>
-      <div class="grade-flow-line" :class="{'grade-flow-line-active':activeIndex>1}"></div>
-      <div class="grade-flow-nav-item" :class="{'grade-flow-nav-item-active':activeIndex>1}" @click="showByIndex(2)">2</div>
-      <div class="grade-flow-line" :class="{'grade-flow-line-active':activeIndex>2}"></div>
-      <div class="grade-flow-nav-item" :class="{'grade-flow-nav-item-active':activeIndex>2}" @click="showByIndex(3)">3</div>
-      <div class="grade-flow-line" :class="{'grade-flow-line-active':activeIndex>3}"></div>
-      <div class="grade-flow-nav-item" :class="{'grade-flow-nav-item-active':activeIndex>3}" @click="showByIndex(4)">4</div>
+      <div class="grade-flow-nav-item" v-for="(nav, index) in navs" :key="index" @click="showByIndex(index+1)">
+        <div class="grade-flow-nav-item-line" :class="{'grade-flow-nav-item-line-active':activeIndex > (index+1)}"></div>
+        <div class="grade-flow-nav-item-index" :class="{'grade-flow-nav-item-index-active':activeIndex > index}">{{nav.id}}</div>
+        <div class="grade-flow-nav-item-info">{{nav.text}}</div>
+      </div>
     </div>
     <div class="grade-flow-content">
       <div class="grade-flow-arrow" v-show="activeIndex > 1" @click="showPrev">
@@ -28,6 +26,24 @@
 export default {
   data() {
     return {
+      navs: [
+        {
+          id: 1,
+          text: '选择作品'
+        },
+        {
+          id: 2,
+          text: '进入作品观看'
+        },
+        {
+          id: 3,
+          text: '观看作品3分钟后收到评分提醒'
+        },
+        {
+          id: 4,
+          text: '完成评分并提交'
+        }
+      ],
       activeIndex: 1
     }
   },
@@ -74,33 +90,53 @@ export default {
     color: #4088ff;
   }
   &-nav {
-    margin: 38px 0 46px;
+    margin: 38px auto 46px;
+    display: flex;
+    width: 976px;
+    max-width: 100%;
     &-item {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      border-radius: 50%;
-      background-color: #e3e2e2;
-      border: 8px solid #f7f6f6;
-      font-size: 20px;
-      color: #666;
-      cursor: pointer;
-      &-active {
-        background-color: #ffb903;
-        color: #fff;
-        border-color: #ffeab3;
+      flex: 1;
+      text-align: center;
+      position: relative;
+      &-index {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        background-color: #e3e2e2;
+        border: 8px solid #f7f6f6;
+        font-size: 20px;
+        color: #666;
+        cursor: pointer;
+        &-active {
+          background-color: #ffb903;
+          color: #fff;
+          border-color: #ffeab3;
+        }
       }
-    }
-  }
-  &-line {
-    display: inline-block;
-    width: 176px;
-    height: 2px;
-    background-color: #ccc;
-    vertical-align: middle;
-    &-active {
-      background-color: #ffb903;
+      &-line {
+        position: absolute;
+        height: 2px;
+        left: 50%;
+        right: -50%;
+        top: 28px;
+        background-color: #ccc;
+        &-active {
+          background-color: #ffb903;
+        }
+      }
+      &-info {
+        font-size: 15px;
+        color: #303133;
+        margin-top: 16px;
+      }
+      &:last-child {
+        .grade-flow-nav-item-line {
+          display: none;
+        }
+      }
     }
   }
   &-content {
@@ -149,15 +185,20 @@ export default {
     &-nav {
       margin-bottom: 16px;
       &-item {
-        width: 25px;
-        height: 25px;
-        border-width: 5px;
-        font-size: 13px;
-        line-height: 25px;
+        &-index {
+          width: 25px;
+          height: 25px;
+          border-width: 5px;
+          font-size: 13px;
+          line-height: 25px;
+        }
+        &-line {
+          top: 18px;
+        }
+        &-info {
+          font-size: 12px;
+        }
       }
-    }
-    &-line {
-      width: 45px;
     }
     &-content {
       padding: 0 20px;
