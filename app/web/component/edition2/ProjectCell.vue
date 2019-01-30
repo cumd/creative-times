@@ -103,7 +103,7 @@ export default {
   },
   methods: {
     goProjectDetail(project) {
-      window.open(`/pbl/project/${project.id}/`)
+      window.open(`https://keepwork.com/pbl/project/${project.id}/`)
     },
     relativeTime(time) {
       const offset = moment().utcOffset()
